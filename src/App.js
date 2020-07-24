@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import CustomizeFeatures from './CustomizeFeatures/CustomizeFeatures.js';
+import Cart from './Cart/Cart.js';
 
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
@@ -101,10 +103,20 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
+          <CustomizeFeatures
+            selected={this.state.selected}
+            USCurrencyFormat={this.USCurrencyFormat}
+            features={this.props.features}
+            updateFeature={this.updateFeature}
+          />
           <form className="main__form">
             <h2>Customize your laptop</h2>
             {features}
           </form>
+          <Cart
+            selected={this.state.selected}
+            USCurrencyFormat={USCurrencyFormat}
+          />
           <section className="main__summary">
             <h2>Your cart</h2>
             {summary}
