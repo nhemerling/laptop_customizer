@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import CustomizeFeatures from './CustomizeFeatures/CustomizeFeatures.js';
 import Cart from './Cart/Cart.js';
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-// import slugify from 'slugify';
-
 import './App.css';
 
 // This object will allow us to
@@ -15,7 +10,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   currency: 'USD'
 });
 
-class App extends Component {
+export default class App extends Component {
   state = {
     selected: {
       Processor: {
@@ -46,7 +41,6 @@ class App extends Component {
   };
 
   render() {
-
     return (
       <div className="App">
         <header>
@@ -68,5 +62,3 @@ class App extends Component {
     );
   };
 }
-
-export default App;
