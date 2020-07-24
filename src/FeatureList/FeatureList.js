@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Option from '../Option/Option.js';
+import './FeatureList.css';
 import slugify from 'slugify';
 
 export default class FeatureList extends Component {
@@ -10,17 +11,6 @@ export default class FeatureList extends Component {
               const itemHash = slugify(JSON.stringify(item));
               return (
                 <div key={itemHash} className="feature__item">
-                  {/* <input
-                    type="radio"
-                    id={itemHash}
-                    className="feature__option"
-                    name={slugify(feature)}
-                    checked={item.name === this.props.selected[feature].name}
-                    onChange={e => this.props.updateFeature(feature, item)}
-                  />
-                  <label htmlFor={itemHash} className="feature__label">
-                    {item.name} ({() => this.props.USCurrencyFormat.format(item.cost)})
-                  </label> */}
                   <Option
                     feature={feature}
                     selected={this.props.selected}
@@ -33,7 +23,6 @@ export default class FeatureList extends Component {
                 </div>
               );
             });
-      
             return (
               <fieldset className="feature" key={featureHash}>
                 <legend className="feature__name">
@@ -43,7 +32,10 @@ export default class FeatureList extends Component {
               </fieldset>
             );
         });
-
-        return(<>{features}</>)
-    }
+        return (
+          <>
+            {features}
+          </>
+        );
+    };
 }
