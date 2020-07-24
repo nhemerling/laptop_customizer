@@ -1,9 +1,9 @@
 .feature__name {
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: bold;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: bold;
 }
     
 .feature__item + .feature__item {
-    margin-top: 0.8rem;
+  margin-top: 0.8rem;
 }

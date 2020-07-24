@@ -21,7 +21,6 @@ export default class Feature extends Component {
               </div>
             );
         });
-        
         return(
             <>
                 <legend className="feature__name">
