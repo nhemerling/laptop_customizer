@@ -10,7 +10,6 @@ export default class CustomizeFeatures extends Component {
                 <FeatureList
                     selected={this.props.selected}
                     USCurrencyFormat={this.props.USCurrencyFormat}
-                    features={this.props.features}
                     updateFeature={this.props.updateFeature}
                 />
             </form>

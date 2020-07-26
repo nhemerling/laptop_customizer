@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Feature from '../Feature/Feature.js';
 import './FeatureList.css';
-
+import Features from '../features.js';
 
 export default class FeatureList extends Component {
     render() {
-        const features = Object.keys(this.props.features).map((feature, idx) => {
+        const features = Object.keys(Features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             return (
               <fieldset className="feature" key={featureHash}>
@@ -13,7 +13,6 @@ export default class FeatureList extends Component {
                   feature={feature}
                   selected={this.props.selected}
                   USCurrencyFormat={this.props.USCurrencyFormat}
-                  features={this.props.features}
                   updateFeature={this.props.updateFeature}
                 />
               </fieldset>

@@ -49,7 +49,6 @@ export default class App extends Component {
           <CustomizeFeatures
             selected={this.state.selected}
             USCurrencyFormat={USCurrencyFormat}
-            features={this.props.features}
             updateFeature={this.updateFeature}
           />
           <Cart
