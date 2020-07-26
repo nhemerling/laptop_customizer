@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CustomizeFeatures from './CustomizeFeatures/CustomizeFeatures.js';
+import Nav from './Nav/Nav.js';
 import Cart from './Cart/Cart.js';
 import './App.css';
 
@@ -43,9 +44,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+        <Nav />
         <main>
           <CustomizeFeatures
             selected={this.state.selected}
